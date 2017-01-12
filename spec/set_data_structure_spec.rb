@@ -22,6 +22,11 @@ describe SetDataStructure do
     expect(set.include?(4)).to eq(true)
   end
 
+  it 'does not contain element' do
+    set = SetDataStructure.new([1,2,3,4,5])
+    expect(set.include?(6)).to eq(false)
+  end
+
   it 'adds a new member to the set' do
     set = SetDataStructure.new([1,2,3,4,5])
     set.add(8)

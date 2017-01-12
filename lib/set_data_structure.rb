@@ -15,7 +15,11 @@ class SetDataStructure
   end
 
   def include?(element)
-    @set_data.include?(element)
+    if @set_data.include?(element)
+      true
+    else
+      false
+    end
   end
 
   def add(element)
