@@ -35,8 +35,7 @@ describe SetDataStructure do
 
   it 'does not add an element if the element is already in the set' do
     set = SetDataStructure.new([1,2,3,4,5])
-    set.add(4)
-    expect(set).to eq("This element is already in the set!")
+    expect{set.add(4)}.to raise_error("This element is already in the set!")
   end
 
   it 'removes an element from the set' do
@@ -44,6 +43,5 @@ describe SetDataStructure do
     set.delete(5)
     expect(set.to_a).to eq([1,2,3,4])
   end
-
 
 end

@@ -14,17 +14,9 @@ class SetDataStructure
     @set_data.size
   end
 
-  def include?(element)
-    if @set_data.include?(element)
-      true
-    else
-      false
-    end
-  end
-
   def add(element)
     if @set_data.include?(element)
-      print "This element is already in the set!"
+      raise "This element is already in the set!"
     else
       @set_data += [element]
     end
